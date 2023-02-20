@@ -52,3 +52,6 @@ A correct configuration is a must, this is stricter than Wasabi.
 2. Prepare your mfa token (6 digits)
 3. Check the result stored in ~/database_aws_mfa
 
+
+Author: Zhenning Li
+Last update: 2023-2-20
