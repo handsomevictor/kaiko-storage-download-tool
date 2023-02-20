@@ -1,0 +1,4 @@
+boto3==1.26.66
+botocore==1.29.66
+pandas==1.5.3
+tqdm==4.64.1
