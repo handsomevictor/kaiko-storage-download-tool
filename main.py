@@ -4,11 +4,12 @@ from download_aws_s3 import AwsS3VictorTool
 
 def main_wasabi():
     params_init = {
-        'bucket_name': 'trades-data',
+        'bucket_name': 'indices-data',
         'end_point_url': 'https://s3.us-east-2.wasabisys.com',
         'aws_arn': 'iam::100000052685:user/zhenning.li'
     }
-    wasabi_folder = 'tick_csv/v1/gz_v1/bbst/BTC30DEC2226000C/2022_10'
+
+    wasabi_folder = 'index/v1/kk_rr_xrpusd_ldn/index_fixing/2023/02/'
 
     tool = WasabiVictorTool(**params_init)
 
@@ -20,7 +21,7 @@ def main_wasabi():
     # tool.store_all_file_names(download_to_file_dir='all_file_names.txt')
 
     params_download = {
-        'download_to_dir': 'database_wasabi_mfa',
+        'download_to_dir': 'database_wasabi_mfa',  # download to this folder in root or other dir, can be changed
         'remove_name_file': True,
         'file_type': 'csv.gz',
         'max_workers_process': 30,
@@ -35,11 +36,10 @@ def main_aws_s3():
 
     download_files_server = AwsS3VictorTool(bucket_name, login=True)
     download_files_server.download_all_file_names_in_folder(folder_name)
-    download_files_server.download_files_from_s3_concurrent(max_workers=30,
+    download_files_server.download_files_from_s3_concurrent(max_workers=100,
                                                             file_type='csv.gz')
 
 
 if __name__ == '__main__':
     # main_wasabi()
     main_aws_s3()
-
