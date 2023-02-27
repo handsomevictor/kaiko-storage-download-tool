@@ -41,5 +41,5 @@ def main_aws_s3():
 
 
 if __name__ == '__main__':
-    # main_wasabi()
-    main_aws_s3()
+    main_wasabi()
+    # main_aws_s3()
