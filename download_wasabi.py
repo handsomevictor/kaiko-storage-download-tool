@@ -4,6 +4,7 @@ and then download them using multithreading (for MFA enabled account, never use 
 """
 
 import boto3
+from botocore.config import Config
 import json
 from concurrent.futures import ThreadPoolExecutor
 from itertools import repeat
@@ -55,11 +56,20 @@ class WasabiVictorTool:
                             aws_secret_access_key=SecretAccessKey,
                             aws_session_token=SessionToken
                             )
+
+        # give more retry times - Sometimes it will fail when there are too many files to download in many threads
+        my_config = Config(
+            retries={
+                'max_attempts': 100,
+                'mode': 'standard'
+            }
+        )
         s3_cli = boto3.client('s3',
                               aws_session_token=SessionToken,
                               aws_secret_access_key=SecretAccessKey,
                               aws_access_key_id=AccessKeyId,
-                              endpoint_url=end_point_url
+                              endpoint_url=end_point_url,
+                              config=my_config
                               )
         self.s3 = s3
         self.s3_cli = s3_cli
@@ -85,9 +95,27 @@ class WasabiVictorTool:
             download_to_file_dir = f'all_files_{"-".join(wasabi_subfolder_name.split("/"))}.txt'
 
         response = self.s3_cli.list_objects_v2(Bucket=self.bucket_name, Prefix=wasabi_subfolder_name)
+        file_names = [obj['Key'] for obj in response['Contents']]
 
         # Extract the list of file names from the response
-        file_names = [obj['Key'] for obj in response['Contents']]
+        i = 0
+        while 'Contents' in response:
+            print(f'Page {i}')
+            i += 1
+            # do something with each object
+            for obj in response['Contents']:
+                file_names.append(obj['Key'])
+
+            # check if there are more results to retrieve
+            if response['IsTruncated']:
+                # get next page of results
+                response = self.s3_cli.list_objects_v2(
+                    Bucket=self.bucket_name,
+                    Prefix=wasabi_subfolder_name,
+                    ContinuationToken=response['NextContinuationToken']
+                )
+            else:
+                break
 
         # save file names
         with open(download_to_file_dir, 'w') as f:
@@ -113,11 +141,12 @@ class WasabiVictorTool:
         print(f'Downloading {file_name} to {download_target_file_dir}')
         self.s3_cli.download_file(self.bucket_name, single_file_wasabi_dir, download_target_file_dir)
 
-        pair = file_name.split('_')[2]
-        pair_dir = os.path.join(os.getcwd(), 'database_wasabi_mfa', pair)
+        # Save to local according to the original folder structure
+        single_instrument_dir = '/'.join(single_file_wasabi_dir.split('/')[:-1])
+        pair_dir = os.path.join(os.getcwd(), 'database_wasabi_mfa', single_instrument_dir)
         try:
             if not os.path.exists(pair_dir):
-                os.mkdir(pair_dir)
+                os.makedirs(pair_dir)
         except FileExistsError:
             pass
 

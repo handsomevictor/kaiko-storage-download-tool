@@ -1,0 +1,2 @@
+intervalStart,intervalEnd,price,parameters
+2023-01-08T07:55:00Z,2023-01-08T08:00:00Z,16951.696672727274,"[{""asset"":""btc"",""weight"":1,""exchanges"":""cbse,gmni,krkn,lmax,stmp"",""calc_window"":300,""partition_size"":""30""}]"

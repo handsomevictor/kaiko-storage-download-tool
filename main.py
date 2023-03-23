@@ -9,7 +9,7 @@ def main_wasabi():
         'aws_arn': 'iam::100000052685:user/zhenning.li'
     }
 
-    wasabi_folder = 'index/v1/kk_rr_xrpusd_ldn/index_fixing/2023/02/'
+    wasabi_folder = 'index/v1/kk_rr_btcusd_sgp/index_fixing/2023/'
 
     tool = WasabiVictorTool(**params_init)
 
@@ -32,11 +32,11 @@ def main_wasabi():
 
 def main_aws_s3():
     bucket_name = 'dumps-kaiko'
-    folder_name = 'markets/aggregated_trades/'
+    folder_name = 'pachira/smuc_full_order_book/cb/btcusd/2023/03'
 
     download_files_server = AwsS3VictorTool(bucket_name, login=True)
     download_files_server.download_all_file_names_in_folder(folder_name)
-    download_files_server.download_files_from_s3_concurrent(max_workers=100,
+    download_files_server.download_files_from_s3_concurrent(max_workers=7,
                                                             file_type='csv.gz')
 
 
