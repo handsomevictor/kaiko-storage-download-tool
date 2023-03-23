@@ -3,6 +3,7 @@ Download logic:
 1. Download all names of a sub folder in a bucket
 2. Download data files to local, delete txt file that contains the names
 3. If data in csv.gz format, unzip and delete the original file
+4. The downloaded folder structure will be the same as on wasabi / aws
 
 
 # Requirements:
