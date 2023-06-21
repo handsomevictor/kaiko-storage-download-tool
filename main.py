@@ -4,12 +4,13 @@ from download_aws_s3 import AwsS3VictorTool
 
 def main_wasabi():
     params_init = {
-        'bucket_name': 'indices-data',
+        'bucket_name': 'indices-backfill',
         'end_point_url': 'https://s3.us-east-2.wasabisys.com',
         'aws_arn': 'iam::100000052685:user/zhenning.li'
     }
 
-    wasabi_folder = 'index/v1/kk_rr_btcusd_sgp/index_fixing/2023/'
+    # wasabi_folder = 'index/v1/kk_pr_dogeusd/real_time/2023/06/'
+    wasabi_folder = 'v1/kk_pr_pepeusd/real_time/PT5S/'
 
     tool = WasabiVictorTool(**params_init)
 
@@ -24,7 +25,7 @@ def main_wasabi():
         'download_to_dir': 'database_wasabi_mfa',  # download to this folder in root or other dir, can be changed
         'remove_name_file': True,
         'file_type': 'csv.gz',
-        'max_workers_process': 30,
+        'max_workers_process': 40,
         'wasabi_folder': wasabi_folder,
     }
     tool.download_files(**params_download)

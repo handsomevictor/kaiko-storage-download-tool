@@ -95,6 +95,7 @@ class WasabiVictorTool:
             download_to_file_dir = f'all_files_{"-".join(wasabi_subfolder_name.split("/"))}.txt'
 
         response = self.s3_cli.list_objects_v2(Bucket=self.bucket_name, Prefix=wasabi_subfolder_name)
+        # print(response)
         file_names = [obj['Key'] for obj in response['Contents']]
 
         # Extract the list of file names from the response
@@ -157,7 +158,10 @@ class WasabiVictorTool:
                 with open(file_name_unzipped, 'wb') as f_out:
                     f_out.writelines(f_in)
 
-            os.remove(download_target_file_dir)
+            try:
+                os.remove(download_target_file_dir)
+            except FileNotFoundError:
+                print(f'File {download_target_file_dir} not found, skip removing')
             print(f"Downloaded {file_name_unzipped} to {pair_dir}, now in csv format")
 
     def download_files(self, all_files_wasabi_dir: list = None, max_workers_process=30, wasabi_folder=None,
