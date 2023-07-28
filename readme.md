@@ -8,7 +8,7 @@ Download logic:
 
 # Requirements:
 1. Install AWS CLI
-2. Configure AWS CLI, and then check dir ~/.aws (macOS) if the credentials and config files are there, check content
+2. Configure AWS CLI, and then check dir `~/.aws` (macOS) if the credentials and config files are there, check content
    The content should contain 2 files:
    1. config
    2. credentials
@@ -25,7 +25,7 @@ Download logic:
 
 3. Find files location on wasabi / AWS S3 (Sub folder etc.)
 4. Open terminal and cd to the root folder, run `pip install -r requirements.txt`
-5. You must have a working AWS / wasabi key and secrets, and they are correctly configured in the file: ~/.aws/credentials
+5. You must have a working AWS / wasabi key and secrets, and they are correctly configured in the file: `~/.aws/credentials`
 
 # How to run:
 ## Wasabi
