@@ -25,6 +25,7 @@ Download logic:
 
 3. Find files location on wasabi / AWS S3 (Sub folder etc.)
 4. Open terminal and cd to the root folder, run `pip install -r requirements.txt`
+5. You must have a working AWS / wasabi key and secrets, and they are correctly configured in the file: ~/.aws/credentials
 
 # How to run:
 ## Wasabi
