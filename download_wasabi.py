@@ -37,6 +37,10 @@ class WasabiVictorTool:
             f'aws sts get-session-token --serial-number arn:aws:{self.aws_arn} --token-code '
             f'{self.mfa_token} --profile wasabi --endpoint-url=https://sts.wasabisys.com')
 
+        print(
+            f'aws sts get-session-token --serial-number arn:aws:{self.aws_arn} --token-code '
+            f'{self.mfa_token} --profile wasabi --endpoint-url=https://sts.wasabisys.com'
+        )
         res = json.loads(res.read())
 
         AccessKeyId = res['Credentials']['AccessKeyId']

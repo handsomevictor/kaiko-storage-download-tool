@@ -29,7 +29,7 @@ Download logic:
 
 # How to run:
 ## Wasabi
-1. Run the script - download_wasabi.py, modify the function default value, etc. Prepare your mfa token (6 digits)
+1. Update the script - download_wasabi.py, modify the function default value, etc. Prepare your mfa token (6 digits)
    More specifically, modify the following:
 
    ```python
@@ -39,7 +39,8 @@ Download logic:
         'aws_arn': 'iam::100000052685:user/zhenning.li'
     }
     ```
-2. Check the result stored in ~/database_wasabi_mfa
+2. Update the main.py to change and include what you want to download.
+3. Check the result stored in ~/database_wasabi_mfa
 
 
 # AWS S3
