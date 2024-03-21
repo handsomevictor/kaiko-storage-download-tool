@@ -4,14 +4,14 @@ from download_aws_s3 import AwsS3VictorTool
 
 def main_wasabi():
     params_init = {
-        'bucket_name': 'indices-backfill',
-        # 'bucket_name': 'indices-data',
+        # 'bucket_name': 'indices-backfill',
+        'bucket_name': 'indices-data',
         'end_point_url': 'https://s3.us-east-2.wasabisys.com',
         'aws_arn': 'iam::100000052685:user/zhenning.li'
     }
 
-    # wasabi_folder = 'index/v1/kk_pr_dogeusd/real_time/2023/06/'
-    wasabi_folder = 'index_v1/v1/extensive/kk_pr_pythusdt/real_time/PT5S/'
+    # wasabi_folder = 'index/v1/kk_pr_dogeusd/real_time/2023/06/'latest
+    wasabi_folder = 'index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/'
 
     tool = WasabiVictorTool(**params_init)
 

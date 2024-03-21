@@ -1,0 +1,165 @@
+Check for PR and RR:
+Checking total number of rows:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-06.csv
+number of rows: 7495
+-----------------------------------
+Checking total number of rows:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-08.csv
+number of rows: 17279
+-----------------------------------
+Checking total number of rows:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-06.csv
+number of rows: 7495
+-----------------------------------
+Check for PR and RR done
+Checking time difference:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-06.csv
+-----------------------------------
+Checking time difference:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-08.csv
+-----------------------------------
+Checking time difference:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-06.csv
+-----------------------------------
+Check duplicates for PR and RR done
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-08.csv
+number of nulls: 3553
+percentage: 0.20561342592592594
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-09.csv
+number of nulls: 4322
+percentage: 0.2501157407407407
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-19.csv
+number of nulls: 1689
+percentage: 0.09774305555555556
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-18.csv
+number of nulls: 2729
+percentage: 0.15792824074074074
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-16.csv
+number of nulls: 4668
+percentage: 0.2701388888888889
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-17.csv
+number of nulls: 3760
+percentage: 0.2175925925925926
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-15.csv
+number of nulls: 1244
+percentage: 0.07199074074074074
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-14.csv
+number of nulls: 1169
+percentage: 0.06765046296296297
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-10.csv
+number of nulls: 2583
+percentage: 0.14947916666666666
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-11.csv
+number of nulls: 1671
+percentage: 0.09670138888888889
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-07.csv
+number of nulls: 1454
+percentage: 0.08414351851851852
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-13.csv
+number of nulls: 1373
+percentage: 0.07945601851851852
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-12.csv
+number of nulls: 1252
+percentage: 0.0724537037037037
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_btcusd_rt/real_time/PT5S/cboe-kaiko_btcusd_rt_real_time_vwm_twap_100_2024-03-06.csv
+number of nulls: 152
+percentage: 0.02028018679119413
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-19.csv
+number of nulls: 3158
+percentage: 0.18275462962962963
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-18.csv
+number of nulls: 4638
+percentage: 0.26840277777777777
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-08.csv
+number of nulls: 3308
+percentage: 0.19144626425140343
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-09.csv
+number of nulls: 6270
+percentage: 0.3628472222222222
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-07.csv
+number of nulls: 1462
+percentage: 0.08460648148148148
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-13.csv
+number of nulls: 3687
+percentage: 0.21336805555555555
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-12.csv
+number of nulls: 2839
+percentage: 0.16429398148148147
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-06.csv
+number of nulls: 284
+percentage: 0.037891927951967976
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-10.csv
+number of nulls: 4492
+percentage: 0.2599537037037037
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-11.csv
+number of nulls: 2985
+percentage: 0.17274305555555555
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-15.csv
+number of nulls: 3484
+percentage: 0.20162037037037037
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-14.csv
+number of nulls: 3036
+percentage: 0.17569444444444443
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-16.csv
+number of nulls: 6342
+percentage: 0.36701388888888886
+-----------------------------------
+Checking zvb:
+file: /Users/zhenningli/Documents/GitHub/kaiko-storage-download-tool/database_wasabi_mfa/index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/PT5S/cboe-kaiko_ethusd_rt_real_time_vwm_twap_100_2024-03-17.csv
+number of nulls: 5708
+percentage: 0.33032407407407405
+-----------------------------------
+Check zvb for PR and RR done

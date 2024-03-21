@@ -9,9 +9,10 @@ For RP and PP:
 import pandas as pd
 import numpy as np
 import os
+from tqdm import tqdm
 
 # use os.join
-dir = os.path.join(os.getcwd(), 'database_wasabi_mfa', 'index')
+dir = os.path.join(os.getcwd(), 'database_wasabi_mfa', 'index_v1')
 
 # if PR_RR_check_report.txt exists, delete it
 if os.path.exists('PR_RR_check_report.txt'):
@@ -24,7 +25,7 @@ with open('PR_RR_check_report.txt', 'a') as f:
 
 def check_total_no_of_rows():
     for root, dirs, files in os.walk(dir):
-        for file in files:
+        for file in tqdm(files):
             if file == '.DS_Store':
                 continue
             if file.endswith(".csv"):
@@ -40,11 +41,13 @@ def check_total_no_of_rows():
                         f.write(f'-----------------------------------\n')
                     # print(f'file: {file_path}')
                     # print(df.shape)
+    with open('PR_RR_check_report.txt', 'a') as f:
+        f.write(f'Check for PR and RR done\n')
 
 
 def check_timestamp_5s():
     for root, dirs, files in os.walk(dir):
-        for file in files:
+        for file in tqdm(files):
             if file == '.DS_Store':
                 continue
             if file.endswith(".csv"):
@@ -68,7 +71,7 @@ def check_timestamp_5s():
 
 def check_duplicate():
     for root, dirs, files in os.walk(dir):
-        for file in files:
+        for file in tqdm(files):
             if file == '.DS_Store':
                 continue
             if file.endswith(".csv"):
@@ -84,11 +87,13 @@ def check_duplicate():
                         f.write(f'-----------------------------------\n')
                     # print(f'file: {file_path}')
                     # print(df[df.duplicated(keep=False)].sort_values(by=['intervalStart', 'intervalEnd']))
+    with open('PR_RR_check_report.txt', 'a') as f:
+        f.write(f'Check duplicates for PR and RR done\n')
 
 
 def check_zvb():
     for root, dirs, files in os.walk(dir):
-        for file in files:
+        for file in tqdm(files):
             if file == '.DS_Store':
                 continue
             if file.endswith(".csv"):
@@ -104,6 +109,8 @@ def check_zvb():
                         f.write(f'number of nulls: {number_of_nulls}\n')
                         f.write(f'percentage: {percentage}\n')
                         f.write(f'-----------------------------------\n')
+    with open('PR_RR_check_report.txt', 'a') as f:
+        f.write(f'Check zvb for PR and RR done\n')
 
 
 def check_special_file():
@@ -172,10 +179,10 @@ def process_pepe_sort():
 
 
 if __name__ == '__main__':
-    # check_total_no_of_rows()
-    # check_timestamp_5s()
-    # check_duplicate()
-    # check_zvb()
+    check_total_no_of_rows()
+    check_timestamp_5s()
+    check_duplicate()
+    check_zvb()
     # check_special_file()
     # ma123()
-    process_pepe_sort()
+    # process_pepe_sort()
