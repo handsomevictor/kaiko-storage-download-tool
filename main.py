@@ -12,7 +12,12 @@ def main_wasabi():
     }
 
     # wasabi_folder = 'index/v1/kk_pr_dogeusd/real_time/2023/06/'latest
+<<<<<<< HEAD
     wasabi_folder = 'index_v1/v1/simple/d2x-kaiko_etheur/real_time/PT5S/'
+=======
+    wasabi_folder = 'index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/'
+    # wasabi_folder = 'index_v1/v1/extensive/cboe-kaiko_ethusd_rt/real_time/'
+>>>>>>> 158dd8ab8aa718e7514ad068363e1ae04ad14bfc
 
     tool = WasabiVictorTool(**params_init)
 
