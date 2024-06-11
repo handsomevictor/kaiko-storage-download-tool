@@ -169,7 +169,7 @@ class WasabiVictorTool:
             print(f"Downloaded {file_name_unzipped} to {pair_dir}, now in csv format")
 
     def download_files(self, all_files_wasabi_dir: list = None, max_workers_process=30, wasabi_folder=None,
-                       download_to_dir=None, file_type='csv.gz', remove_name_file=True):
+                       download_to_dir=None, file_type='csv.gz', remove_name_file=True, only_selected_dates=None):
         """
         :param wasabi_folder: either be all (download all files in this bucket (takes a long time), or a subfolder name
         :param file_type: Should be either 'csv' or 'csv.gz'
@@ -188,6 +188,13 @@ class WasabiVictorTool:
                         all_files_wasabi_dir.append(line.strip())
             except FileNotFoundError:
                 print(f'File {wasabi_folder} not found, please run store_all_file_names() first')
+
+        # only select the file names that are in the selected dates
+        # print(all_files_wasabi_dir)
+
+        if isinstance(only_selected_dates, list):
+            all_files_wasabi_dir = [file for file in all_files_wasabi_dir if
+                                    any(date in file for date in only_selected_dates)]
 
         # delete temp file that stores all file names
         if remove_name_file:

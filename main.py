@@ -1,23 +1,23 @@
+import pandas as pd
+
 from download_wasabi import WasabiVictorTool
 from download_aws_s3 import AwsS3VictorTool
 
 
 def main_wasabi():
     params_init = {
-        # 'bucket_name': 'indices-backfill',
-        'bucket_name': 'indices-data',
+        'bucket_name': 'indices-backfill',
+        # 'bucket_name': 'indices-data',
         # 'bucket_name': 'indices-backtest',
         'end_point_url': 'https://s3.us-east-2.wasabisys.com',
         'aws_arn': 'iam::100000052685:user/zhenning.li'
     }
 
     # wasabi_folder = 'index/v1/kk_pr_dogeusd/real_time/2023/06/'latest
-<<<<<<< HEAD
-    wasabi_folder = 'index_v1/v1/simple/d2x-kaiko_etheur/real_time/PT5S/'
-=======
-    wasabi_folder = 'index_v1/v1/simple/cboe-kaiko_ethusd_rt/real_time/'
-    # wasabi_folder = 'index_v1/v1/extensive/cboe-kaiko_ethusd_rt/real_time/'
->>>>>>> 158dd8ab8aa718e7514ad068363e1ae04ad14bfc
+
+    # wasabi_folder = 'index_v1/v1/simple/d2x-kaiko_etheur/real_time/PT5S/'
+
+    wasabi_folder = 'index_v1/v1/extensive/kk_rfr_btcusd_1s/real_time/PT1S/'
 
     tool = WasabiVictorTool(**params_init)
 
@@ -28,12 +28,16 @@ def main_wasabi():
     # ------- Download all files in the bucket / Usually takes a long time -------
     # tool.store_all_file_names(download_to_file_dir='all_file_names.txt')
 
+    # ------- Only download selected dates -------
+    only_selected_dates = pd.date_range(start='2024-03-19', end='2024-06-10', freq='D').strftime('%Y-%m-%d').tolist()
+
     params_download = {
         'download_to_dir': 'database_wasabi_mfa',  # download to this folder in root or other dir, can be changed
         'remove_name_file': True,
         'file_type': 'csv.gz',
         'max_workers_process': 40,
         'wasabi_folder': wasabi_folder,
+        "only_selected_dates": only_selected_dates,
     }
     tool.download_files(**params_download)
 
